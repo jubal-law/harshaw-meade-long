@@ -56,6 +56,31 @@ function escapeHtml(input: string): string {
     .replace(/'/g, "&#39;");
 }
 
+/**
+ * Branded email shell. Table-based with bgcolor attributes — div CSS
+ * backgrounds get stripped by some mail clients (Spark, Outlook), which
+ * leaves the ivory wordmark invisible on white.
+ */
+function emailShell(tagline: string, bodyHtml: string): string {
+  return `
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 620px; margin: 0 auto; font-family: Georgia, 'Times New Roman', serif; color: #1F2937;">
+      <tr>
+        <td height="4" bgcolor="#B99457" style="background-color: #B99457; height: 4px; line-height: 4px; font-size: 0;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#0F1B2B" style="background-color: #0F1B2B; padding: 24px 28px;">
+          <p style="margin: 0; color: #F6F2EA; font-size: 18px; letter-spacing: 0.15em;">HARSHAW MEADE LONG &middot; LLP</p>
+          <p style="margin: 6px 0 0; color: #B99457; font-size: 11px; letter-spacing: 0.2em; font-family: Arial, sans-serif;">${tagline}</p>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" style="background-color: #FFFFFF; border: 1px solid #E3DCCD; border-top: none; padding: 28px;">
+          ${bodyHtml}
+        </td>
+      </tr>
+    </table>`;
+}
+
 async function sendEmailViaSendDev(params: SendDevEmailParams) {
   const apiKey = process.env.SEND_DEV_API_KEY;
   const apiUrl =
@@ -146,14 +171,21 @@ export async function POST(request: Request): Promise<Response> {
       return json({ error: "Please select a practice from the list." }, 400);
     }
 
-    // Geo/agent context injected by Vercel
+    // Geo/agent context injected by Vercel (values arrive URI-encoded)
     const h = request.headers;
+    const decode = (value: string) => {
+      try {
+        return decodeURIComponent(value);
+      } catch {
+        return value;
+      }
+    };
     const clientIp =
       (h.get("x-forwarded-for") || "unknown").split(",")[0]?.trim() || "unknown";
     const location = [
-      h.get("x-vercel-ip-city") || "",
-      h.get("x-vercel-ip-country-region") || "",
-      h.get("x-vercel-ip-country") || "",
+      decode(h.get("x-vercel-ip-city") || ""),
+      decode(h.get("x-vercel-ip-country-region") || ""),
+      decode(h.get("x-vercel-ip-country") || ""),
     ]
       .filter(Boolean)
       .join(", ") || "Unknown";
@@ -184,14 +216,9 @@ export async function POST(request: Request): Promise<Response> {
     await sendEmailViaSendDev({
       to: [RECIPIENT],
       subject: `[HML contact] ${name} · ${matter}`,
-      html: `
-        <div style="font-family: Georgia, 'Times New Roman', serif; max-width: 620px; margin: 0 auto; color: #1F2937;">
-          <div style="height: 4px; background: #B99457;"></div>
-          <div style="background: #0F1B2B; padding: 24px 28px;">
-            <p style="margin: 0; color: #F6F2EA; font-size: 18px; letter-spacing: 0.15em;">HARSHAW MEADE LONG &middot; LLP</p>
-            <p style="margin: 6px 0 0; color: #B99457; font-size: 11px; letter-spacing: 0.2em; font-family: Arial, sans-serif;">NEW CONSULTATION REQUEST</p>
-          </div>
-          <div style="background: #FFFFFF; border: 1px solid #E3DCCD; border-top: none; padding: 28px;">
+      html: emailShell(
+        "NEW CONSULTATION REQUEST",
+        `
             <p style="margin: 6px 0;"><strong>Name:</strong> ${safe.name}</p>
             <p style="margin: 6px 0;"><strong>Email:</strong> <a href="mailto:${safe.email}" style="color: #96763E;">${safe.email}</a></p>
             <p style="margin: 6px 0;"><strong>Nature of matter:</strong> ${safe.matter}</p>
@@ -205,9 +232,8 @@ export async function POST(request: Request): Promise<Response> {
               <p style="margin: 3px 0;">Location: ${safe.location} &middot; IP: ${safe.clientIp}</p>
               <p style="margin: 3px 0; word-break: break-all;">User agent: ${safe.userAgent}</p>
             </div>
-          </div>
-        </div>
-      `,
+        `,
+      ),
       text: [
         "New consultation request — HarshawMeadeLong.com",
         "",
@@ -230,14 +256,9 @@ export async function POST(request: Request): Promise<Response> {
     await sendEmailViaSendDev({
       to: [email],
       subject: "Received — Harshaw, Meade & Long LLP",
-      html: `
-        <div style="font-family: Georgia, 'Times New Roman', serif; max-width: 600px; margin: 0 auto; color: #1F2937;">
-          <div style="height: 4px; background: #B99457;"></div>
-          <div style="background: #0F1B2B; padding: 24px 28px;">
-            <p style="margin: 0; color: #F6F2EA; font-size: 18px; letter-spacing: 0.15em;">HARSHAW MEADE LONG &middot; LLP</p>
-            <p style="margin: 6px 0 0; color: #B99457; font-size: 11px; letter-spacing: 0.2em; font-family: Arial, sans-serif;">COUNSEL FOR THE LONG VIEW</p>
-          </div>
-          <div style="background: #FFFFFF; border: 1px solid #E3DCCD; border-top: none; padding: 28px;">
+      html: emailShell(
+        "COUNSEL FOR THE LONG VIEW",
+        `
             <p style="margin: 0 0 16px; font-size: 17px;">Dear ${safe.name},</p>
             <p style="margin: 0 0 16px; line-height: 1.7;">Your inquiry has been received. A member of the firm responds within one business day.</p>
             <p style="margin: 0 0 16px; line-height: 1.7;">We read every matter before we reply. If yours is urgent, the founding office can be reached at (816)&nbsp;555-1939.</p>
@@ -247,9 +268,8 @@ export async function POST(request: Request): Promise<Response> {
               Harshaw, Meade &amp; Long is the demonstration practice of <a href="https://jubal.law" style="color: #96763E;">Jubal.law</a>.
               No legal services are offered, and this message does not create an attorney&ndash;client relationship.
             </div>
-          </div>
-        </div>
-      `,
+        `,
+      ),
       text: [
         `Dear ${name},`,
         "",
