@@ -19,12 +19,12 @@ The partners are borrowed, with affection and respect, from the works of Robert 
 Five pages of hand-built static HTML and CSS. No framework, no build step, no dependencies.
 
 ```
-site/
+public/
   index.html       Home — hero, stat band, the firm, our people, practices
   attorneys.html   Attorneys — name partners, counsel & associates, the Fair Witness Standard
   practice.html    Practice Areas — six practices, one standard (and a note on fees)
   about.html       The Firm — history, values, timeline, and the homage
-  contact.html     Contact — form (demonstration stub), Kansas City & Luna City offices
+  contact.html     Contact — working consultation form, Kansas City & Luna City offices
   styles.css       Single shared stylesheet — all design tokens live here
   favicon.svg      Gold HML monogram on navy
 ```
@@ -58,13 +58,13 @@ A *Representative Matters* page ships later; the nav and stylesheet are already 
 pnpm dev        # http://localhost:3065 — pages, clean URLs, and the contact form
 ```
 
-No build step, no dependencies. `pnpm dev` runs `scripts/dev.mjs`, a ~100-line zero-dependency Node server that serves `site/` with Vercel-style clean URLs **and** mounts `api/contact.ts` at `/api/contact` — so the contact form works locally exactly as it does in production (it reads `SEND_DEV_API_KEY` from `.env.local`; without it the form returns a polite 503). Requires Node 22.18+ for native TypeScript imports.
+No build step, no dependencies. `pnpm dev` runs `scripts/dev.mjs`, a ~100-line zero-dependency Node server that serves `public/` with Vercel-style clean URLs **and** mounts `api/contact.ts` at `/api/contact` — so the contact form works locally exactly as it does in production (it reads `SEND_DEV_API_KEY` from `.env.local`; without it the form returns a polite 503). Requires Node 22.18+ for native TypeScript imports.
 
-Just want the pages? Any static server works: `npx serve site` or `python3 -m http.server 8000 --directory site`.
+Just want the pages? Any static server works: `npx serve public` or `python3 -m http.server 8000 --directory public`.
 
 ## Deployment
 
-Deployed to [Vercel](https://vercel.com) as a static site. `vercel.json` points the output at `site/` and enables clean URLs (`/attorneys` rather than `/attorneys.html`). There is no build command — push to `main` and it ships.
+Deployed to [Vercel](https://vercel.com) with zero configuration: static pages are served from `public/`, `api/contact.ts` becomes a serverless function, and `vercel.json` enables clean URLs (`/attorneys` rather than `/attorneys.html`). There is no build command — push to `main` and it ships.
 
 ## License & legal
 

@@ -1,4 +1,4 @@
-// Local dev server: serves /site statically (with Vercel-style clean URLs)
+// Local dev server: serves /public statically (with Vercel-style clean URLs)
 // and mounts api/contact.ts at POST /api/contact, exactly as Vercel does in
 // production. Zero dependencies; needs Node 22.18+ for TypeScript imports.
 import { createServer } from "node:http";
@@ -8,7 +8,7 @@ import { extname, join, normalize, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(fileURLToPath(new URL("..", import.meta.url)));
-const SITE = join(ROOT, "site");
+const SITE = join(ROOT, "public");
 const PORT = Number(process.env.PORT) || 3065;
 
 // Load .env.local so SEND_DEV_API_KEY reaches the contact function
