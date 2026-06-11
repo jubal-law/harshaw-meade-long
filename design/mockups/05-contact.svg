@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;}
+      .kick{font-size:12px;letter-spacing:4px;fill:#96763E;font-weight:600;}
+      .nav{font-size:12px;letter-spacing:2.5px;fill:#1F2937;font-weight:600;}
+      .body{font-size:17px;fill:#1F2937;}
+      .muted{font-size:13.5px;fill:#6B7480;}
+      .label{font-size:10.5px;letter-spacing:2px;fill:#8A93A1;font-weight:600;}
+      .field{fill:#FFFFFF;stroke:#E3DCCD;}
+    </style>
+  </defs>
+
+  <rect width="1440" height="1720" fill="#F6F2EA"/>
+  <rect width="1440" height="4" fill="#B99457"/>
+
+  <!-- HEADER -->
+  <line x1="0" y1="92" x2="1440" y2="92" stroke="#E3DCCD"/>
+  <text x="120" y="55" class="serif" font-size="21" letter-spacing="3.5" fill="#0F1B2B" font-weight="600">HARSHAW MEADE LONG</text>
+  <text x="120" y="74" font-size="10" letter-spacing="3" fill="#96763E">ATTORNEYS &amp; COUNSELORS AT LAW · LLP</text>
+  <text x="780" y="53" class="nav">THE FIRM</text>
+  <text x="905" y="53" class="nav">ATTORNEYS</text>
+  <text x="1052" y="53" class="nav">PRACTICE AREAS</text>
+  <text x="1242" y="53" class="nav" fill="#96763E">CONTACT</text>
+  <line x1="1242" y1="62" x2="1320" y2="62" stroke="#B99457" stroke-width="2"/>
+
+  <!-- PAGE HEAD -->
+  <text x="120" y="204" class="kick">CONTACT</text>
+  <text x="120" y="262" class="serif" font-size="44" fill="#0F1B2B">Begin the conversation.</text>
+  <line x1="120" y1="312" x2="1320" y2="312" stroke="#E3DCCD"/>
+
+  <!-- FORM (left column) -->
+  <text x="120" y="392" class="label">FULL NAME</text>
+  <rect x="120" y="406" width="356" height="52" class="field"/>
+  <text x="512" y="392" class="label">EMAIL</text>
+  <rect x="512" y="406" width="356" height="52" class="field"/>
+
+  <text x="120" y="506" class="label">NATURE OF MATTER</text>
+  <rect x="120" y="520" width="748" height="52" class="field"/>
+  <text x="142" y="552" class="muted">Corporate · Litigation · Estates · IP &amp; Media · Water Rights · Frontier Commerce · Other</text>
+  <path d="M 836 540 l 8 10 l 8 -10" fill="none" stroke="#96763E" stroke-width="1.5"/>
+
+  <text x="120" y="620" class="label">YOUR MATTER, BRIEFLY</text>
+  <rect x="120" y="634" width="748" height="160" class="field"/>
+
+  <rect x="120" y="838" width="328" height="54" fill="#0F1B2B"/>
+  <text x="284" y="871" text-anchor="middle" font-size="12" letter-spacing="3" fill="#B99457" font-weight="600">REQUEST A CONSULTATION</text>
+  <text x="120" y="930" class="muted" font-style="italic">A member of the firm responds within one business day.</text>
+
+  <!-- OFFICES (right column) -->
+  <rect x="940" y="378" width="380" height="300" fill="#FFFFFF"/>
+  <rect x="940" y="378" width="380" height="3" fill="#B99457"/>
+  <text x="972" y="438" class="serif" font-size="22" fill="#0F1B2B">Kansas City</text>
+  <text x="972" y="462" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">FOUNDING OFFICE</text>
+  <text x="972" y="498" class="muted">1907 Butler Place, Suite 100</text>
+  <text x="972" y="518" class="muted">Kansas City, Missouri 64108</text>
+  <text x="972" y="552" class="muted">(816) 555-1939</text>
+  <text x="972" y="572" class="muted">counsel@harshawmeadelong.com</text>
+
+  <rect x="940" y="710" width="380" height="200" fill="#FFFFFF"/>
+  <rect x="940" y="710" width="380" height="3" fill="#B99457"/>
+  <text x="972" y="770" class="serif" font-size="22" fill="#0F1B2B">Luna City</text>
+  <text x="972" y="794" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">BY APPOINTMENT</text>
+  <text x="972" y="830" class="muted">Tycho Under Concourse, Level 3</text>
+  <text x="972" y="856" class="muted" font-style="italic">(listed without further comment)</text>
+
+  <!-- MAP placeholder strip -->
+  <rect x="120" y="1030" width="1200" height="240" fill="#0F1B2B"/>
+  <line x1="120" y1="1100" x2="1320" y2="1180" stroke="#1D3049" stroke-width="3"/>
+  <line x1="320" y1="1030" x2="540" y2="1270" stroke="#1D3049" stroke-width="3"/>
+  <line x1="760" y1="1030" x2="660" y2="1270" stroke="#1D3049" stroke-width="3"/>
+  <line x1="1080" y1="1030" x2="1180" y2="1270" stroke="#1D3049" stroke-width="3"/>
+  <circle cx="720" cy="1150" r="8" fill="#B99457"/>
+  <text x="720" y="1196" text-anchor="middle" font-size="10" letter-spacing="2" fill="#5A6B80">[ DUOTONE MAP — DOWNTOWN KANSAS CITY ]</text>
+
+  <!-- FOOTER -->
+  <rect y="1540" width="1440" height="180" fill="#0F1B2B"/>
+  <rect y="1540" width="1440" height="1" fill="#B99457"/>
+  <text x="120" y="1598" class="serif" font-size="17" letter-spacing="2.5" fill="#F6F2EA">HARSHAW MEADE LONG · LLP</text>
+  <text x="120" y="1624" font-size="12" fill="#A7B0BD">1907 Butler Place, Suite 100, Kansas City, Missouri 64108 · (816) 555-1939</text>
+  <text x="560" y="1598" font-size="11" letter-spacing="2" fill="#A7B0BD">THE FIRM · ATTORNEYS · PRACTICE AREAS · CONTACT</text>
+  <text x="1320" y="1598" text-anchor="end" font-size="10" letter-spacing="2" fill="#B99457" font-weight="600">DRAFTED, DESIGNED &amp; DEPLOYED BY JUBAL.LAW</text>
+  <text x="120" y="1676" font-size="11" fill="#5A6B80">Attorney Advertising. Prior results do not guarantee a similar outcome. © 1939–2026 Harshaw, Meade &amp; Long LLP. This is a demonstration website.</text>
+</svg>

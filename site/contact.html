@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Harshaw, Meade &amp; Long LLP</title>
+  <meta name="description" content="Begin the conversation with Harshaw, Meade &amp; Long LLP. Founding office in Kansas City, Missouri; consultations by request.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-name">Harshaw Meade Long</span>
+        <span class="brand-sub">Attorneys &amp; Counselors at Law &middot; LLP</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="about.html">The Firm</a>
+        <a href="attorneys.html">Attorneys</a>
+        <a href="practice.html">Practice Areas</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Page head -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <span class="kicker">Contact</span>
+        <h2>Begin the conversation.</h2>
+        <hr class="hairline" style="margin-top: 48px;">
+      </div>
+    </section>
+
+    <section class="section section--tight" style="padding-bottom: 112px;">
+      <div class="container contact-grid">
+
+        <!-- Form -->
+        <div>
+          <form class="contact-form">
+            <div class="visually-hidden" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="matter">Nature of Matter</label>
+              <select id="matter" name="matter" required>
+                <option value="" selected>Select a practice</option>
+                <option>Corporate</option>
+                <option>Litigation</option>
+                <option>Estates</option>
+                <option>IP &amp; Media</option>
+                <option>Water Rights</option>
+                <option>Frontier Commerce</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Your Matter, Briefly</label>
+              <textarea id="message" name="message" rows="6"></textarea>
+            </div>
+            <button class="btn btn--solid" type="submit">Request a Consultation</button>
+            <p class="form-microcopy">A member of the firm responds within one business day.</p>
+            <p class="form-error" hidden role="alert"></p>
+          </form>
+          <div class="form-success" hidden tabindex="-1" role="status">
+            <p>Received. A member of the firm will respond within one business day.</p>
+          </div>
+        </div>
+
+        <!-- Offices -->
+        <div>
+          <article class="office-card">
+            <h3>Kansas City</h3>
+            <span class="office-tag">Founding Office</span>
+            <address>
+              1907 Butler Place, Suite 100<br>
+              Kansas City, Missouri 64108<br><br>
+              <a href="tel:+18165551939">(816) 555-1939</a><br>
+              <a href="mailto:counsel@harshawmeadelong.com">counsel@harshawmeadelong.com</a>
+            </address>
+          </article>
+          <article class="office-card">
+            <h3>Luna City</h3>
+            <span class="office-tag">By Appointment</span>
+            <address>
+              Tycho Under Concourse, Level 3
+              <span class="office-aside">(listed without further comment)</span>
+            </address>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Map strip -->
+      <div class="container" style="margin-top: 32px;">
+        <div class="map-strip" role="img" aria-label="Stylized duotone map of downtown Kansas City with the firm's office marked in gold."></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-wordmark">Harshaw Meade Long &middot; LLP</p>
+        <p class="footer-address">1907 Butler Place, Suite 100, Kansas City, Missouri 64108 &middot; (816)&nbsp;555-1939</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="about.html">The Firm</a>
+        <a href="attorneys.html">Attorneys</a>
+        <a href="practice.html">Practice Areas</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-badge"><a href="https://jubal.law" target="_blank" rel="noopener">Drafted, Designed &amp; Deployed by Jubal.law</a></p>
+    </div>
+    <div class="container">
+      <p class="footer-legal">Attorney Advertising. Prior results do not guarantee a similar outcome. &copy; 1939&ndash;2026 Harshaw, Meade &amp; Long LLP. This is a demonstration website.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var header = document.querySelector(".site-header");
+      toggle.addEventListener("click", function () {
+        var isOpen = header.classList.toggle("nav-open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      // Real submission via /api/contact (send.dev behind a Vercel function).
+      var form = document.querySelector(".contact-form");
+      var success = document.querySelector(".form-success");
+      var errorEl = document.querySelector(".form-error");
+      var submitBtn = form.querySelector("button[type='submit']");
+      var loadedAt = Date.now();
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        errorEl.hidden = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+
+        fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            matter: document.getElementById("matter").value,
+            message: document.getElementById("message").value.trim(),
+            honeypot: document.getElementById("website").value,
+            formLoadTime: loadedAt,
+            submissionTime: Date.now()
+          })
+        })
+          .then(function (res) {
+            return res.json().catch(function () { return {}; }).then(function (data) {
+              if (!res.ok) {
+                throw new Error(data.error || "Something went wrong. Please try again in a moment.");
+              }
+            });
+          })
+          .then(function () {
+            form.hidden = true;
+            success.hidden = false;
+            success.focus();
+          })
+          .catch(function (err) {
+            errorEl.textContent = err.message;
+            errorEl.hidden = false;
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Request a Consultation";
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

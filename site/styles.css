@@ -1,0 +1,1141 @@
+/* ==========================================================================
+   Harshaw, Meade & Long LLP — shared stylesheet
+   Tokens per design/DESIGN-SPEC.md §2–§5. Mockups are the visual truth.
+   ========================================================================== */
+
+:root {
+  --ink-navy: #0F1B2B;
+  --charcoal: #1F2937;
+  --ivory: #F6F2EA;
+  --paper: #FFFFFF;
+  --gold: #B99457;
+  --gold-dark: #96763E;
+  --mist: #8A93A1;
+  --mist-on-navy: #A7B0BD;
+  --line: #E3DCCD;
+  /* Mockup muted-on-light shade; AA-compliant where --mist is too light for small text */
+  --mist-deep: #6B7480;
+
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ---- Reset ---- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-radius: 0; /* sharp corners are part of the look */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--charcoal);
+  background: var(--ivory);
+}
+
+/* The firm's signature: 4px gold bar, full bleed, top of every page */
+body::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: var(--gold);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--gold-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ink-navy);
+  color: var(--gold);
+  padding: 12px 24px;
+  font: 600 13px var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---- Layout primitives ---- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+.section--paper {
+  background: var(--paper);
+}
+
+.section--tight {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.hairline {
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ---- Type ---- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--ink-navy);
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+p {
+  max-width: 68ch;
+}
+
+.kicker {
+  display: block;
+  font: 600 13px/1 var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 22px;
+}
+
+.kicker--light {
+  color: var(--gold);
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 28px;
+  margin-top: 18px;
+}
+
+.muted {
+  color: var(--mist-deep);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* ---- Buttons & text links ---- */
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold-dark);
+  font: 600 13px/1 var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--ink-navy);
+}
+
+.btn--on-navy {
+  color: var(--gold);
+}
+
+/* Contact submit is the inverse: navy fill, gold text */
+.btn--solid {
+  background: var(--ink-navy);
+  border-color: var(--ink-navy);
+  color: var(--gold);
+}
+
+.btn--solid:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink-navy);
+}
+
+.link-cta {
+  font: 600 13px/1 var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  text-decoration: none;
+}
+
+.link-cta:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* ---- Header ---- */
+
+.site-header {
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.header-inner {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.brand-name {
+  display: block;
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ink-navy);
+}
+
+.brand-sub {
+  display: block;
+  font: 400 10px/1 var(--sans);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-top: 6px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 44px;
+}
+
+.site-nav a {
+  font: 600 13px/1 var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  text-decoration: none;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--gold-dark);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--gold-dark);
+  border-bottom-color: var(--gold);
+}
+
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold-dark);
+  font: 600 12px/1 var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+/* ---- Hero (home) ---- */
+
+.hero {
+  position: relative;
+  background: var(--ink-navy);
+  /* barely-there navy vignette — the only gradient allowed */
+  background-image: radial-gradient(120% 100% at 30% 0%, rgba(29, 48, 73, 0.35), transparent 60%);
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  z-index: 1;
+}
+
+.hero h1 {
+  color: var(--ivory);
+  max-width: 60%;
+}
+
+.hero-sub {
+  margin-top: 26px;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--mist-on-navy);
+  max-width: 52ch;
+}
+
+.hero .btn {
+  margin-top: 44px;
+}
+
+.hero-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 36%;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05) brightness(0.85);
+}
+
+/* navy duotone overlay */
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--ink-navy), rgba(15, 27, 43, 0.35) 35%);
+  mix-blend-mode: normal;
+}
+
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ink-navy);
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/* ---- Stat band (home) ---- */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.stat {
+  text-align: center;
+  padding: 8px 16px;
+}
+
+.stat + .stat {
+  border-left: 1px solid var(--line);
+}
+
+.stat-number {
+  font-family: var(--serif);
+  font-size: 46px;
+  line-height: 1.1;
+  color: var(--ink-navy);
+}
+
+.stat-label {
+  display: block;
+  margin-top: 10px;
+  font: 600 11px/1.5 var(--sans);
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+  color: var(--mist-deep);
+}
+
+/* ---- Practice cards ---- */
+
+.practice-card {
+  background: var(--paper);
+  border-top: 3px solid var(--gold);
+  padding: 36px 30px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.practice-card h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.practice-card p {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  color: var(--mist-deep);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.practice-card .link-cta {
+  margin-top: auto;
+  font-size: 11px;
+}
+
+.practice-card--wide {
+  padding: 48px 40px 40px;
+}
+
+.practice-card--wide h3 {
+  font-size: 26px;
+  line-height: 34px;
+}
+
+/* Cards sitting on the white section need a hairline to read as panels */
+.section--paper .practice-card {
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---- Portrait panel: navy + gold ring + serif monogram ---- */
+
+.portrait {
+  background: var(--ink-navy);
+  aspect-ratio: 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait--tall {
+  aspect-ratio: 6 / 5;
+}
+
+.portrait .monogram {
+  width: 104px;
+  height: 104px;
+  border: 1px solid var(--gold);
+  border-radius: 50%; /* the one sanctioned curve: the portrait ring */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
+
+/* ---- Attorney cards ---- */
+
+.attorney-card {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.attorney-name {
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--ink-navy);
+  margin-top: 24px;
+}
+
+.attorney-title {
+  display: block;
+  font: 600 11px/1.6 var(--sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-top: 8px;
+}
+
+.attorney-cred {
+  margin-top: 10px;
+  color: var(--mist-deep);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* Counsel & associates row */
+
+.person-card {
+  background: var(--paper);
+  border-left: 3px solid var(--gold);
+  padding: 30px 30px 26px;
+}
+
+.person-card .attorney-name {
+  font-size: 19px;
+  line-height: 26px;
+  margin-top: 0;
+}
+
+.person-card .attorney-title {
+  font-size: 10.5px;
+}
+
+.roster-label {
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mist-deep);
+  margin-bottom: 30px;
+}
+
+/* ---- Pull-quote slab / navy bands ---- */
+
+.slab {
+  background: var(--ink-navy);
+  text-align: center;
+  padding: 100px 24px;
+}
+
+.slab blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--ivory);
+  max-width: 72ch;
+  margin: 0 auto;
+}
+
+.slab-note {
+  margin: 18px auto 0;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--mist-on-navy);
+}
+
+.slab-attribution {
+  display: block;
+  margin-top: 28px;
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.slab .kicker {
+  color: var(--gold);
+}
+
+.slab-sub {
+  margin: 22px auto 0;
+  font-size: 15px;
+  color: var(--mist-on-navy);
+}
+
+/* ---- Billing note / hairline box ---- */
+
+.note-box {
+  border: 1px solid var(--gold);
+  padding: 44px 40px;
+  text-align: center;
+}
+
+.note-box .kicker {
+  margin-bottom: 18px;
+}
+
+.note-box p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 30px;
+  max-width: none;
+}
+
+/* ---- About: values, timeline, homage ---- */
+
+.value h3 {
+  margin-bottom: 10px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--gold);
+  margin-top: 64px;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  padding: 42px 16px 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.timeline-year {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink-navy);
+}
+
+.timeline-event {
+  margin: 6px auto 0;
+  color: var(--mist-deep);
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 24ch;
+}
+
+.about-figure {
+  position: relative;
+}
+
+.about-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05) brightness(0.85);
+}
+
+.about-figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ink-navy);
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+}
+
+.homage {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homage::before,
+.homage::after {
+  content: "";
+  display: block;
+  width: min(400px, 60%);
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto;
+}
+
+.homage::before {
+  margin-bottom: 56px;
+}
+
+.homage::after {
+  margin-top: 56px;
+}
+
+.homage h3 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.homage p {
+  margin: 22px auto 0;
+  font-size: 15px;
+  line-height: 26px;
+  max-width: 72ch;
+}
+
+.homage .closing {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--charcoal);
+}
+
+/* ---- Contact ---- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 7fr 4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.form-field {
+  margin-bottom: 36px;
+}
+
+.form-field label {
+  display: block;
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mist-deep);
+  margin-bottom: 12px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 15px 16px;
+  font: 400 15px/1.5 var(--sans);
+  color: var(--charcoal);
+}
+
+.form-field textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10'%3E%3Cpath d='M1 1l7 8 7-8' fill='none' stroke='%2396763E' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  padding-right: 48px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 0;
+  border-color: var(--gold);
+}
+
+.form-microcopy {
+  margin-top: 24px;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--mist-deep);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.form-error {
+  margin-top: 28px;
+  border: 1px solid #A0522D;
+  background: var(--paper);
+  padding: 16px 20px;
+  color: #7A3222;
+  font-size: 15px;
+  line-height: 24px;
+  max-width: none;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.form-success {
+  border: 1px solid var(--gold);
+  padding: 44px 40px;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--ink-navy);
+}
+
+.office-card {
+  background: var(--paper);
+  border-top: 3px solid var(--gold);
+  padding: 38px 32px 34px;
+}
+
+.office-card + .office-card {
+  margin-top: 32px;
+}
+
+.office-card h3 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.office-tag {
+  display: block;
+  font: 600 10.5px/1 var(--sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.office-card address {
+  font-style: normal;
+  color: var(--mist-deep);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.office-card a {
+  color: var(--mist-deep);
+  text-decoration: none;
+}
+
+.office-card a:hover {
+  color: var(--gold-dark);
+  text-decoration: underline;
+}
+
+.office-aside {
+  display: block;
+  margin-top: 8px;
+  font-style: italic;
+  color: var(--mist-deep);
+  font-size: 14px;
+}
+
+/* Abstract duotone map strip */
+.map-strip {
+  position: relative;
+  height: 240px;
+  background: var(--ink-navy);
+  background-image:
+    linear-gradient(99deg, transparent 49.7%, #1D3049 49.7%, #1D3049 50.3%, transparent 50.3%),
+    linear-gradient(48deg, transparent 49.7%, #1D3049 49.7%, #1D3049 50.3%, transparent 50.3%),
+    linear-gradient(-65deg, transparent 49.7%, #1D3049 49.7%, #1D3049 50.3%, transparent 50.3%),
+    linear-gradient(160deg, transparent 49.6%, #1D3049 49.6%, #1D3049 50.4%, transparent 50.4%);
+}
+
+.map-strip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ---- Matter card (future matters.html — spec §5.6/§6.6; do not remove) ---- */
+
+.matter-card {
+  background: var(--paper);
+  border-top: 3px solid var(--gold);
+  padding: 48px 40px 40px;
+}
+
+.matter-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  color: var(--ink-navy);
+}
+
+.matter-tag {
+  display: block;
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.matter-keep {
+  border: 1px solid var(--line);
+  padding: 22px 24px;
+  margin-top: 28px;
+  font-size: 14px;
+  line-height: 23px;
+  color: var(--mist-deep);
+}
+
+.matter-keep strong {
+  color: var(--charcoal);
+}
+
+.matter-disclaimer {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--mist-deep);
+}
+
+/* ---- Footer ---- */
+
+.site-footer {
+  background: var(--ink-navy);
+  border-top: 1px solid var(--gold);
+  padding: 60px 0 44px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 5fr 4fr 3fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.footer-wordmark {
+  font-family: var(--serif);
+  font-size: 17px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.footer-address {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--mist-on-navy);
+  max-width: none;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-top: 4px;
+}
+
+.footer-nav a {
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mist-on-navy);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--gold);
+}
+
+.footer-badge {
+  text-align: right;
+}
+
+.footer-badge a {
+  font: 600 10px/1.8 var(--sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.footer-badge a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.footer-legal {
+  margin-top: 48px;
+  font-size: 11px;
+  line-height: 19px;
+  color: var(--mist);
+  max-width: none;
+}
+
+/* ==========================================================================
+   Responsive — single 900px breakpoint per spec
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  body {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-size: 23px;
+    line-height: 31px;
+  }
+
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  /* Header collapses to wordmark + menu button */
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .brand-sub {
+    font-size: 8px;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-header.nav-open .site-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--line);
+    z-index: 50;
+  }
+
+  .site-header.nav-open .site-nav a {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-header.nav-open .site-nav a[aria-current="page"] {
+    border-bottom: 1px solid var(--line);
+    color: var(--gold-dark);
+  }
+
+  .hero-inner {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .hero-media {
+    display: none;
+  }
+
+  .hero h1 {
+    max-width: none;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 0;
+    padding: 48px 0;
+  }
+
+  .stat + .stat {
+    border-left: 0;
+  }
+
+  .stat:nth-child(even) {
+    border-left: 1px solid var(--line);
+  }
+
+  .grid-2,
+  .grid-3,
+  .contact-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 16px;
+  }
+
+  .timeline-item {
+    padding-bottom: 24px;
+  }
+
+  .slab {
+    padding: 64px 24px;
+  }
+
+  .slab blockquote {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-badge {
+    text-align: left;
+  }
+}

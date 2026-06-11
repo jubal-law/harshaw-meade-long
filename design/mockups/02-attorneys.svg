@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 2150" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;}
+      .kick{font-size:12px;letter-spacing:4px;fill:#96763E;font-weight:600;}
+      .nav{font-size:12px;letter-spacing:2.5px;fill:#1F2937;font-weight:600;}
+      .body{font-size:17px;fill:#1F2937;}
+      .muted{font-size:13px;fill:#8A93A1;}
+    </style>
+  </defs>
+
+  <rect width="1440" height="2150" fill="#F6F2EA"/>
+  <rect width="1440" height="4" fill="#B99457"/>
+
+  <!-- HEADER -->
+  <line x1="0" y1="92" x2="1440" y2="92" stroke="#E3DCCD"/>
+  <text x="120" y="55" class="serif" font-size="21" letter-spacing="3.5" fill="#0F1B2B" font-weight="600">HARSHAW MEADE LONG</text>
+  <text x="120" y="74" font-size="10" letter-spacing="3" fill="#96763E">ATTORNEYS &amp; COUNSELORS AT LAW · LLP</text>
+  <text x="780" y="53" class="nav">THE FIRM</text>
+  <text x="905" y="53" class="nav" fill="#96763E">ATTORNEYS</text>
+  <line x1="905" y1="62" x2="1000" y2="62" stroke="#B99457" stroke-width="2"/>
+  <text x="1052" y="53" class="nav">PRACTICE AREAS</text>
+  <text x="1242" y="53" class="nav">CONTACT</text>
+
+  <!-- PAGE HEAD -->
+  <text x="120" y="204" class="kick">OUR PEOPLE</text>
+  <text x="120" y="262" class="serif" font-size="44" fill="#0F1B2B">Deliberately senior.</text>
+  <text x="120" y="312" class="body">No leverage pyramid. No hand-offs. The lawyer you meet is the lawyer who does the work.</text>
+  <line x1="120" y1="356" x2="1320" y2="356" stroke="#E3DCCD"/>
+
+  <!-- PARTNERS -->
+  <text x="120" y="430" font-size="11" letter-spacing="3" fill="#8A93A1" font-weight="600">NAME PARTNERS</text>
+
+  <!-- Harshaw -->
+  <rect x="120" y="460" width="360" height="300" fill="#0F1B2B"/>
+  <circle cx="300" cy="590" r="52" fill="none" stroke="#B99457"/>
+  <text x="300" y="599" text-anchor="middle" class="serif" font-size="24" fill="#B99457">JEH</text>
+  <text x="120" y="800" class="serif" font-size="24" fill="#0F1B2B">Jubal E. Harshaw</text>
+  <text x="120" y="826" font-size="11" letter-spacing="2.5" fill="#96763E" font-weight="600">SENIOR PARTNER · LL.B., M.D., Sc.D.</text>
+  <text x="120" y="852" class="muted">Counsel, physician, and author; argues only when</text>
+  <text x="120" y="870" class="muted">necessary and never loses on paper.</text>
+
+  <!-- Meade -->
+  <rect x="540" y="460" width="360" height="300" fill="#0F1B2B"/>
+  <circle cx="720" cy="590" r="52" fill="none" stroke="#B99457"/>
+  <text x="720" y="599" text-anchor="middle" class="serif" font-size="24" fill="#B99457">HMM</text>
+  <text x="540" y="800" class="serif" font-size="24" fill="#0F1B2B">Hazel M. Meade</text>
+  <text x="540" y="826" font-size="11" letter-spacing="2.5" fill="#96763E" font-weight="600">MANAGING PARTNER</text>
+  <text x="540" y="852" class="muted">Frontier-tested negotiator; built the firm's appellate</text>
+  <text x="540" y="870" class="muted">practice from the ground up — twice.</text>
+
+  <!-- Long -->
+  <rect x="960" y="460" width="360" height="300" fill="#0F1B2B"/>
+  <circle cx="1140" cy="590" r="52" fill="none" stroke="#B99457"/>
+  <text x="1140" y="599" text-anchor="middle" class="serif" font-size="24" fill="#B99457">LL</text>
+  <text x="960" y="800" class="serif" font-size="24" fill="#0F1B2B">Lazarus Long</text>
+  <text x="960" y="826" font-size="11" letter-spacing="2.5" fill="#96763E" font-weight="600">SENIOR COUNSEL</text>
+  <text x="960" y="852" class="muted">The firm's longest-serving lawyer, by a margin</text>
+  <text x="960" y="870" class="muted">no one can quite calculate.</text>
+
+  <!-- COUNSEL & ASSOCIATES -->
+  <text x="120" y="980" font-size="11" letter-spacing="3" fill="#8A93A1" font-weight="600">COUNSEL &amp; ASSOCIATES</text>
+
+  <g>
+    <rect x="120" y="1010" width="378" height="120" fill="#FFFFFF"/>
+    <rect x="120" y="1010" width="3" height="120" fill="#B99457"/>
+    <text x="150" y="1058" class="serif" font-size="19" fill="#0F1B2B">Anne Cavendish</text>
+    <text x="150" y="1082" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">COUNSEL · CERTIFIED FAIR WITNESS</text>
+
+    <rect x="531" y="1010" width="378" height="120" fill="#FFFFFF"/>
+    <rect x="531" y="1010" width="3" height="120" fill="#B99457"/>
+    <text x="561" y="1058" class="serif" font-size="19" fill="#0F1B2B">Gillian Boardman</text>
+    <text x="561" y="1082" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">COUNSEL</text>
+
+    <rect x="942" y="1010" width="378" height="120" fill="#FFFFFF"/>
+    <rect x="942" y="1010" width="3" height="120" fill="#B99457"/>
+    <text x="972" y="1058" class="serif" font-size="19" fill="#0F1B2B">Manuel G. Davis</text>
+    <text x="972" y="1082" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">OF COUNSEL</text>
+
+    <rect x="120" y="1154" width="378" height="120" fill="#FFFFFF"/>
+    <rect x="120" y="1154" width="3" height="120" fill="#B99457"/>
+    <text x="150" y="1202" class="serif" font-size="19" fill="#0F1B2B">Maureen Johnson</text>
+    <text x="150" y="1226" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">ASSOCIATE</text>
+
+    <rect x="531" y="1154" width="378" height="120" fill="#FFFFFF"/>
+    <rect x="531" y="1154" width="3" height="120" fill="#B99457"/>
+    <text x="561" y="1202" class="serif" font-size="19" fill="#0F1B2B">Friday Jones</text>
+    <text x="561" y="1226" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">ASSOCIATE</text>
+
+    <rect x="942" y="1154" width="378" height="120" fill="#FFFFFF"/>
+    <rect x="942" y="1154" width="3" height="120" fill="#B99457"/>
+    <text x="972" y="1202" class="serif" font-size="19" fill="#0F1B2B">Dorcas Miriam</text>
+    <text x="972" y="1226" font-size="10.5" letter-spacing="2" fill="#96763E" font-weight="600">DIRECTOR OF ADMINISTRATION</text>
+  </g>
+
+  <!-- FAIR WITNESS BAND -->
+  <rect y="1370" width="1440" height="300" fill="#0F1B2B"/>
+  <text x="720" y="1466" text-anchor="middle" font-size="12" letter-spacing="4" fill="#B99457" font-weight="600">THE FAIR WITNESS STANDARD</text>
+  <text x="720" y="1520" text-anchor="middle" class="serif" font-size="24" font-style="italic" fill="#F6F2EA">Every material representation we make is reviewed by counsel trained to attest</text>
+  <text x="720" y="1556" text-anchor="middle" class="serif" font-size="24" font-style="italic" fill="#F6F2EA">only to what is actually known.</text>
+  <text x="720" y="1608" text-anchor="middle" font-size="15" fill="#A7B0BD">We tell you what the house looks like on this side.</text>
+
+  <!-- FOOTER -->
+  <rect y="1970" width="1440" height="180" fill="#0F1B2B"/>
+  <rect y="1970" width="1440" height="1" fill="#B99457"/>
+  <text x="120" y="2028" class="serif" font-size="17" letter-spacing="2.5" fill="#F6F2EA">HARSHAW MEADE LONG · LLP</text>
+  <text x="120" y="2054" font-size="12" fill="#A7B0BD">1907 Butler Place, Suite 100, Kansas City, Missouri 64108 · (816) 555-1939</text>
+  <text x="560" y="2028" font-size="11" letter-spacing="2" fill="#A7B0BD">THE FIRM · ATTORNEYS · PRACTICE AREAS · CONTACT</text>
+  <text x="1320" y="2028" text-anchor="end" font-size="10" letter-spacing="2" fill="#B99457" font-weight="600">DRAFTED, DESIGNED &amp; DEPLOYED BY JUBAL.LAW</text>
+  <text x="120" y="2106" font-size="11" fill="#5A6B80">Attorney Advertising. Prior results do not guarantee a similar outcome. © 1939–2026 Harshaw, Meade &amp; Long LLP. This is a demonstration website.</text>
+
+  <!-- CTA between sections -->
+  <rect x="556" y="1770" width="328" height="54" fill="none" stroke="#B99457"/>
+  <text x="720" y="1803" text-anchor="middle" font-size="12" letter-spacing="3" fill="#96763E" font-weight="600">REQUEST A CONSULTATION</text>
+</svg>

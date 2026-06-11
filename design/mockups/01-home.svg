@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3036" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif;}
+      .kick{font-size:12px;letter-spacing:4px;fill:#96763E;font-weight:600;}
+      .kickL{font-size:12px;letter-spacing:4px;fill:#B99457;font-weight:600;}
+      .nav{font-size:12px;letter-spacing:2.5px;fill:#1F2937;font-weight:600;}
+      .body{font-size:17px;fill:#1F2937;}
+      .muted{font-size:13px;fill:#8A93A1;}
+    </style>
+  </defs>
+
+  <!-- page bg -->
+  <rect width="1440" height="3036" fill="#F6F2EA"/>
+
+  <!-- signature gold bar -->
+  <rect width="1440" height="4" fill="#B99457"/>
+
+  <!-- ============ HEADER ============ -->
+  <rect y="4" width="1440" height="88" fill="#F6F2EA"/>
+  <line x1="0" y1="92" x2="1440" y2="92" stroke="#E3DCCD"/>
+  <text x="120" y="55" class="serif" font-size="21" letter-spacing="3.5" fill="#0F1B2B" font-weight="600">HARSHAW MEADE LONG</text>
+  <text x="120" y="74" font-size="10" letter-spacing="3" fill="#96763E">ATTORNEYS &amp; COUNSELORS AT LAW · LLP</text>
+  <text x="780" y="53" class="nav">THE FIRM</text>
+  <text x="905" y="53" class="nav">ATTORNEYS</text>
+  <text x="1052" y="53" class="nav">PRACTICE AREAS</text>
+  <text x="1242" y="53" class="nav" fill="#96763E">CONTACT</text>
+  <line x1="1242" y1="62" x2="1320" y2="62" stroke="#B99457" stroke-width="2"/>
+
+  <!-- ============ HERO ============ -->
+  <rect y="92" width="1440" height="580" fill="#0F1B2B"/>
+  <!-- duotone architectural image placeholder, right third -->
+  <rect x="920" y="92" width="520" height="580" fill="#16263A"/>
+  <rect x="965" y="92" width="34" height="580" fill="#1D3049"/>
+  <rect x="1040" y="92" width="34" height="580" fill="#1D3049"/>
+  <rect x="1115" y="92" width="34" height="580" fill="#1D3049"/>
+  <rect x="1190" y="92" width="34" height="580" fill="#1D3049"/>
+  <rect x="1265" y="92" width="34" height="580" fill="#1D3049"/>
+  <rect x="1340" y="92" width="34" height="580" fill="#1D3049"/>
+  <rect x="920" y="92" width="520" height="580" fill="#0F1B2B" opacity="0.25"/>
+  <text x="1180" y="650" text-anchor="middle" font-size="10" letter-spacing="2" fill="#5A6B80">[ DUOTONE IMAGE — COLUMNS / LAW LIBRARY ]</text>
+
+  <text x="120" y="268" class="kickL">ESTABLISHED 1939</text>
+  <text x="120" y="346" class="serif" font-size="62" fill="#F6F2EA" font-weight="500">Counsel for the long view.</text>
+  <text x="120" y="404" font-size="18" fill="#A7B0BD">For nearly a century, Harshaw, Meade &amp; Long has advised the people and</text>
+  <text x="120" y="432" font-size="18" fill="#A7B0BD">enterprises who plan in decades, not quarters.</text>
+  <rect x="120" y="486" width="208" height="54" fill="none" stroke="#B99457"/>
+  <text x="224" y="519" text-anchor="middle" font-size="12" letter-spacing="3" fill="#B99457" font-weight="600">OUR PRACTICE</text>
+
+  <!-- ============ STAT BAND ============ -->
+  <g>
+    <text x="270" y="762" text-anchor="middle" class="serif" font-size="46" fill="#0F1B2B">87</text>
+    <text x="270" y="794" text-anchor="middle" font-size="11" letter-spacing="2.5" fill="#8A93A1">YEARS OF PRACTICE</text>
+    <line x1="420" y1="730" x2="420" y2="800" stroke="#E3DCCD"/>
+    <text x="570" y="762" text-anchor="middle" class="serif" font-size="46" fill="#0F1B2B">6</text>
+    <text x="570" y="794" text-anchor="middle" font-size="11" letter-spacing="2.5" fill="#8A93A1">PRACTICE GROUPS</text>
+    <line x1="720" y1="730" x2="720" y2="800" stroke="#E3DCCD"/>
+    <text x="870" y="762" text-anchor="middle" class="serif" font-size="46" fill="#0F1B2B">3</text>
+    <text x="870" y="794" text-anchor="middle" font-size="11" letter-spacing="2.5" fill="#8A93A1">CONTINENTS</text>
+    <line x1="1020" y1="730" x2="1020" y2="800" stroke="#E3DCCD"/>
+    <text x="1170" y="762" text-anchor="middle" class="serif" font-size="46" fill="#0F1B2B">1</text>
+    <text x="1170" y="794" text-anchor="middle" font-size="11" letter-spacing="2.5" fill="#8A93A1">STANDARD OF CARE</text>
+  </g>
+  <line x1="120" y1="852" x2="1320" y2="852" stroke="#E3DCCD"/>
+
+  <!-- ============ THE FIRM ============ -->
+  <text x="120" y="964" class="kick">THE FIRM</text>
+  <text x="120" y="1022" class="serif" font-size="40" fill="#0F1B2B">Judgment, above all.</text>
+  <text x="120" y="1072" class="body">Clients do not retain us for boilerplate. They retain us for judgment — the kind that is</text>
+  <text x="120" y="1100" class="body">earned slowly and applied precisely. We are deliberately small, deliberately senior,</text>
+  <text x="120" y="1128" class="body">and deliberate in everything else.</text>
+  <rect x="120" y="1166" width="226" height="52" fill="none" stroke="#B99457"/>
+  <text x="233" y="1198" text-anchor="middle" font-size="12" letter-spacing="3" fill="#96763E" font-weight="600">ABOUT THE FIRM</text>
+
+  <!-- ============ OUR PEOPLE ============ -->
+  <rect y="1282" width="1440" height="600" fill="#FFFFFF"/>
+  <text x="120" y="1376" class="kick">OUR PEOPLE</text>
+  <text x="120" y="1430" class="serif" font-size="40" fill="#0F1B2B">The name on the door does the work.</text>
+
+  <!-- card 1 -->
+  <rect x="120" y="1474" width="360" height="240" fill="#0F1B2B"/>
+  <circle cx="300" cy="1578" r="44" fill="none" stroke="#B99457"/>
+  <text x="300" y="1586" text-anchor="middle" class="serif" font-size="22" fill="#B99457">JEH</text>
+  <text x="120" y="1752" class="serif" font-size="22" fill="#0F1B2B">Jubal E. Harshaw</text>
+  <text x="120" y="1776" font-size="11" letter-spacing="2.5" fill="#96763E" font-weight="600">SENIOR PARTNER</text>
+  <text x="120" y="1798" class="muted">LL.B., M.D., Sc.D.</text>
+  <!-- card 2 -->
+  <rect x="540" y="1474" width="360" height="240" fill="#0F1B2B"/>
+  <circle cx="720" cy="1578" r="44" fill="none" stroke="#B99457"/>
+  <text x="720" y="1586" text-anchor="middle" class="serif" font-size="22" fill="#B99457">HMM</text>
+  <text x="540" y="1752" class="serif" font-size="22" fill="#0F1B2B">Hazel M. Meade</text>
+  <text x="540" y="1776" font-size="11" letter-spacing="2.5" fill="#96763E" font-weight="600">MANAGING PARTNER</text>
+  <text x="540" y="1798" class="muted">Appellate &amp; complex negotiation</text>
+  <!-- card 3 -->
+  <rect x="960" y="1474" width="360" height="240" fill="#0F1B2B"/>
+  <circle cx="1140" cy="1578" r="44" fill="none" stroke="#B99457"/>
+  <text x="1140" y="1586" text-anchor="middle" class="serif" font-size="22" fill="#B99457">LL</text>
+  <text x="960" y="1752" class="serif" font-size="22" fill="#0F1B2B">Lazarus Long</text>
+  <text x="960" y="1776" font-size="11" letter-spacing="2.5" fill="#96763E" font-weight="600">SENIOR COUNSEL</text>
+  <text x="960" y="1798" class="muted">Longest-serving lawyer, by some margin</text>
+
+  <text x="120" y="1846" font-size="12" letter-spacing="3" fill="#96763E" font-weight="600">ALL ATTORNEYS  →</text>
+
+  <!-- ============ PRACTICE AREAS ============ -->
+  <text x="120" y="1986" class="kick">WHAT WE DO</text>
+  <text x="120" y="2040" class="serif" font-size="40" fill="#0F1B2B">Six practices. One standard.</text>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="120" y="2084" width="378" height="168" fill="#FFFFFF"/>
+    <rect x="120" y="2084" width="378" height="3" fill="#B99457"/>
+    <text x="146" y="2132" class="serif" font-size="20" fill="#0F1B2B">Corporate &amp; Private Enterprise</text>
+    <text x="146" y="2160" class="muted">Formation to succession, for founders who</text>
+    <text x="146" y="2178" class="muted">intend to keep what they build.</text>
+    <text x="146" y="2216" font-size="11" letter-spacing="2" fill="#96763E" font-weight="600">READ MORE →</text>
+
+    <rect x="531" y="2084" width="378" height="168" fill="#FFFFFF"/>
+    <rect x="531" y="2084" width="378" height="3" fill="#B99457"/>
+    <text x="557" y="2132" class="serif" font-size="20" fill="#0F1B2B">Complex Litigation &amp; Appeals</text>
+    <text x="557" y="2160" class="muted">We try cases rarely and win them regularly.</text>
+    <text x="557" y="2178" class="muted">Most disputes end at our first brief.</text>
+    <text x="557" y="2216" font-size="11" letter-spacing="2" fill="#96763E" font-weight="600">READ MORE →</text>
+
+    <rect x="942" y="2084" width="378" height="168" fill="#FFFFFF"/>
+    <rect x="942" y="2084" width="378" height="3" fill="#B99457"/>
+    <text x="968" y="2132" class="serif" font-size="20" fill="#0F1B2B">Trusts, Estates &amp; Generations</text>
+    <text x="968" y="2160" class="muted">Structures designed to outlive their drafters.</text>
+    <text x="968" y="2178" class="muted">Every generation, since the founding.</text>
+    <text x="968" y="2216" font-size="11" letter-spacing="2" fill="#96763E" font-weight="600">READ MORE →</text>
+  </g>
+  <!-- row 2 -->
+  <g>
+    <rect x="120" y="2284" width="378" height="168" fill="#FFFFFF"/>
+    <rect x="120" y="2284" width="378" height="3" fill="#B99457"/>
+    <text x="146" y="2332" class="serif" font-size="20" fill="#0F1B2B">Intellectual Property &amp; Media</text>
+    <text x="146" y="2360" class="muted">Authors, inventors, and the occasional</text>
+    <text x="146" y="2378" class="muted">polymath — in every medium yet invented.</text>
+    <text x="146" y="2416" font-size="11" letter-spacing="2" fill="#96763E" font-weight="600">READ MORE →</text>
+
+    <rect x="531" y="2284" width="378" height="168" fill="#FFFFFF"/>
+    <rect x="531" y="2284" width="378" height="3" fill="#B99457"/>
+    <text x="557" y="2332" class="serif" font-size="20" fill="#0F1B2B">Water &amp; Natural Resource Rights</text>
+    <text x="557" y="2360" class="muted">Few assets are more contested or less</text>
+    <text x="557" y="2378" class="muted">understood. We grok water law.</text>
+    <text x="557" y="2416" font-size="11" letter-spacing="2" fill="#96763E" font-weight="600">READ MORE →</text>
+
+    <rect x="942" y="2284" width="378" height="168" fill="#FFFFFF"/>
+    <rect x="942" y="2284" width="378" height="3" fill="#B99457"/>
+    <text x="968" y="2332" class="serif" font-size="20" fill="#0F1B2B">Aerospace &amp; Frontier Commerce</text>
+    <text x="968" y="2360" class="muted">Launch services, lunar mineral claims,</text>
+    <text x="968" y="2378" class="muted">long-haul ventures. Our contracts hold.</text>
+    <text x="968" y="2416" font-size="11" letter-spacing="2" fill="#96763E" font-weight="600">READ MORE →</text>
+  </g>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <rect y="2516" width="1440" height="260" fill="#0F1B2B"/>
+  <text x="720" y="2622" text-anchor="middle" class="serif" font-size="30" font-style="italic" fill="#F6F2EA">“Specialization is for insects. A counselor must see the whole board.”</text>
+  <text x="720" y="2672" text-anchor="middle" font-size="11" letter-spacing="3" fill="#B99457" font-weight="600">L. LONG, SENIOR COUNSEL</text>
+
+  <!-- ============ FOOTER ============ -->
+  <rect y="2856" width="1440" height="180" fill="#0F1B2B"/>
+  <rect y="2856" width="1440" height="1" fill="#B99457"/>
+  <text x="120" y="2914" class="serif" font-size="17" letter-spacing="2.5" fill="#F6F2EA">HARSHAW MEADE LONG · LLP</text>
+  <text x="120" y="2940" font-size="12" fill="#A7B0BD">1907 Butler Place, Suite 100, Kansas City, Missouri 64108 · (816) 555-1939</text>
+  <text x="560" y="2914" font-size="11" letter-spacing="2" fill="#A7B0BD">THE FIRM · ATTORNEYS · PRACTICE AREAS · CONTACT</text>
+  <text x="1320" y="2914" text-anchor="end" font-size="10" letter-spacing="2" fill="#B99457" font-weight="600">DRAFTED, DESIGNED &amp; DEPLOYED BY JUBAL.LAW</text>
+  <text x="120" y="2992" font-size="11" fill="#5A6B80">Attorney Advertising. Prior results do not guarantee a similar outcome. © 1939–2026 Harshaw, Meade &amp; Long LLP. This is a demonstration website.</text>
+</svg>
